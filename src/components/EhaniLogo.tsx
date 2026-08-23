@@ -27,7 +27,7 @@ export const EhaniLogo: React.FC<EhaniLogoProps> = ({
   return (
     <div className={`flex items-center gap-3.5 select-none ${className}`}>
       <img 
-        src={encodeURI("/ChatGPT Image 23 ago 2026, 05_58_13 p.m..png")} 
+        src={encodeURI("ehanitransp")} 
         alt="EHANI Construction Group Logo" 
         style={{ height: `${currentSize.icon}px` }}
         className="w-auto object-contain" 
