@@ -1,0 +1,6 @@
+{
+  "name": "Ehani Construction",
+  "description": "Florida Certified General Contractor (CGC: 1541118) specializing in home remodeling, new construction, roofing, HVAC, concrete, and commercial projects.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
