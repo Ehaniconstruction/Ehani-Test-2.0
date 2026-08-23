@@ -1,5 +1,5 @@
 import React from 'react';
-import logoImg from '../logo.png';
+import logoImg from '../ehanitransp.png';
 
 interface EhaniLogoProps {
   size?: 'sm' | 'md' | 'lg' | 'xl';
