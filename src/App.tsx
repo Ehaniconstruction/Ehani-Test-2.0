@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { ServicesSection } from './components/ServicesSection';
-import { ProjectEstimator } from './components/ProjectEstimator';
 import { GallerySection } from './components/GallerySection';
 import { ProcessSection } from './components/ProcessSection';
 import { WhyChooseUs } from './components/WhyChooseUs';
@@ -61,7 +60,7 @@ export default function App() {
         setShowFloatingBar(false);
       }
 
-      const sections = ['hero', 'services', 'gallery', 'estimator', 'process', 'why-us', 'faq', 'contact'];
+      const sections = ['hero', 'services', 'gallery', 'process', 'why-us', 'faq', 'contact'];
       for (const section of sections) {
         const el = document.getElementById(section);
         if (el) {
@@ -107,15 +106,7 @@ export default function App() {
         onOpenQuoteModal={(serviceName) => handleOpenQuoteModal(serviceName)}
       />
 
-      {/* 4. Interactive Cost Estimator */}
-      <ProjectEstimator
-        lang={lang}
-        onProceedWithEstimate={(estimateSummary) => {
-          handleOpenQuoteModal(estimateSummary);
-        }}
-      />
-
-      {/* 5. Real Projects Gallery with Lightbox */}
+      {/* 4. Real Projects Gallery with Lightbox */}
       <GallerySection
         lang={lang}
         onOpenQuoteModal={(serviceName) => handleOpenQuoteModal(serviceName)}

@@ -3,8 +3,8 @@ import { ServiceItem, ProjectItem, TestimonialItem, FaqItem, ProcessStep } from 
 export const COMPANY_INFO = {
   name: 'Ehani Construction',
   legalName: 'Ehani Construction Group LLC',
-  tagline: 'Florida Certified General Contractor (CGC: 1541118)',
-  taglineEn: 'Florida Certified General Contractor (CGC: 1541118)',
+  tagline: 'Florida Certified General Contractor',
+  taglineEn: 'Florida Certified General Contractor',
   subTagline: 'Remodeling, New Construction, Specialty Roofing, HVAC & General Contracting Across Florida',
   subTaglineEn: 'Remodeling, New Construction, Specialty Roofing, HVAC & General Contracting Across Florida',
   phone: '(850) 800-6118',
@@ -27,7 +27,7 @@ export const COMPANY_INFO = {
   businessHoursEn: 'Monday to Saturday: 7:00 AM – 7:00 PM (Emergency & Storm Response Available)',
   licenseNumber: 'CGC: 1541118',
   licenseState: 'Florida State Certified General Contractor',
-  insuranceCoverage: 'Fully Licensed, Bonded & $2,000,000 Insured • Workers Comp & General Liability',
+  insuranceCoverage: 'Fully Licensed, Bonded & Fully Insured • Workers Comp & General Liability',
   financingInfo: 'Flexible Financing Available Through Renew Financial & RenewPACE',
   establishedYear: '2012',
   completedProjects: '1,500+',
@@ -80,8 +80,8 @@ export const SERVICES_DATA: ServiceItem[] = [
     titleEn: 'New Construction & Custom Builds',
     shortDescription: 'Custom single-family home construction and commercial building projects from initial permitting to final walkthrough.',
     shortDescriptionEn: 'Custom single-family home construction and commercial building projects from initial permitting to final walkthrough.',
-    fullDescription: 'As a Florida Certified General Contractor (CGC: 1541118), Ehani Construction delivers ground-up residential custom homes and commercial facilities. We handle full architectural coordination, engineering, state & local permitting, foundation pouring, framing, mechanicals, and premium finishes.',
-    fullDescriptionEn: 'As a Florida Certified General Contractor (CGC: 1541118), Ehani Construction delivers ground-up residential custom homes and commercial facilities. We handle full architectural coordination, engineering, state & local permitting, foundation pouring, framing, mechanicals, and premium finishes.',
+    fullDescription: 'As a Florida Certified General Contractor, Ehani Construction delivers ground-up residential custom homes and commercial facilities. We handle full architectural coordination, engineering, state & local permitting, foundation pouring, framing, mechanicals, and premium finishes.',
+    fullDescriptionEn: 'As a Florida Certified General Contractor, Ehani Construction delivers ground-up residential custom homes and commercial facilities. We handle full architectural coordination, engineering, state & local permitting, foundation pouring, framing, mechanicals, and premium finishes.',
     iconName: 'Building2',
     badge: 'Certified General Contractor',
     badgeEn: 'Certified General Contractor',
@@ -455,12 +455,12 @@ export const PROCESS_STEPS: ProcessStep[] = [
     icon: 'AwardCheck',
     details: [
       'Detailed checklist inspection of every finish and mechanical',
-      'Delivery of official CGC: 1541118 warranty certificates',
+      'Delivery of official written warranty certificates',
       'Direct ongoing post-construction support and care'
     ],
     detailsEn: [
       'Detailed checklist inspection of every finish and mechanical',
-      'Delivery of official CGC: 1541118 warranty certificates',
+      'Delivery of official written warranty certificates',
       'Direct ongoing post-construction support and care'
     ]
   }
@@ -475,8 +475,8 @@ export const TESTIMONIALS_DATA: TestimonialItem[] = [
     location: 'Miami, FL (Miami-Dade)',
     rating: 5,
     date: '3 weeks ago',
-    comment: 'Ehani Construction (CGC: 1541118) replaced our entire roof and rebuilt damaged decking after storm season. They were on time, explained every step, assisted with financing via Renew Financial, and completed the job in 2 days. Truly top-tier professionals in South Florida!',
-    commentEn: 'Ehani Construction (CGC: 1541118) replaced our entire roof and rebuilt damaged decking after storm season. They were on time, explained every step, assisted with financing via Renew Financial, and completed the job in 2 days. Truly top-tier professionals in South Florida!',
+    comment: 'Ehani Construction replaced our entire roof and rebuilt damaged decking after storm season. They were on time, explained every step, assisted with financing via Renew Financial, and completed the job in 2 days. Truly top-tier professionals in South Florida!',
+    commentEn: 'Ehani Construction replaced our entire roof and rebuilt damaged decking after storm season. They were on time, explained every step, assisted with financing via Renew Financial, and completed the job in 2 days. Truly top-tier professionals in South Florida!',
     projectType: 'Roof Replacement & Re-Decking',
     projectTypeEn: 'Roof Replacement & Re-Decking',
     verified: true,
@@ -516,8 +516,8 @@ export const FAQS_DATA: FaqItem[] = [
     id: 'faq-1',
     question: 'What is your contractor license and are you certified in Florida?',
     questionEn: 'What is your contractor license and are you certified in Florida?',
-    answer: 'Ehani Construction is a state-certified general contractor holding Florida License CGC: 1541118. As a Certified General Contractor (CGC), we are legally qualified and approved by the Florida Department of Business and Professional Regulation (DBPR) to build, remodel, and engineer residential and commercial construction projects throughout the entire State of Florida.',
-    answerEn: 'Ehani Construction is a state-certified general contractor holding Florida License CGC: 1541118. As a Certified General Contractor (CGC), we are legally qualified and approved by the Florida Department of Business and Professional Regulation (DBPR) to build, remodel, and engineer residential and commercial construction projects throughout the entire State of Florida.',
+    answer: 'Ehani Construction is a state-certified general contractor. As a Certified General Contractor (CGC), we are legally qualified and approved by the Florida Department of Business and Professional Regulation (DBPR) to build, remodel, and engineer residential and commercial construction projects throughout the entire State of Florida.',
+    answerEn: 'Ehani Construction is a state-certified general contractor. As a Certified General Contractor (CGC), we are legally qualified and approved by the Florida Department of Business and Professional Regulation (DBPR) to build, remodel, and engineer residential and commercial construction projects throughout the entire State of Florida.',
     category: 'Licensing & Certification',
     categoryEn: 'Licensing & Certification'
   },
@@ -560,7 +560,7 @@ export const FAQS_DATA: FaqItem[] = [
 ];
 
 export const TRUST_METRICS = [
-  { value: 'CGC: 1541118', label: 'FL Certified General Contractor', labelEn: 'FL Certified General Contractor' },
+  { value: 'Certified', label: 'FL Certified General Contractor', labelEn: 'FL Certified General Contractor' },
   { value: '(850) 800-6118', label: 'Direct Toll-Free Contact', labelEn: 'Direct Toll-Free Contact' },
   { value: 'Renew Financial', label: 'PACE Financing Available', labelEn: 'PACE Financing Available' },
   { value: '1,500+', label: 'Florida Projects Completed', labelEn: 'Florida Projects Completed' },

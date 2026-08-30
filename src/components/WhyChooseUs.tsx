@@ -22,10 +22,10 @@ export const WhyChooseUs: React.FC<WhyChooseUsProps> = ({ lang }) => {
   const differentiators = [
     {
       icon: ShieldCheck,
-      titleEs: 'Licencia Florida CGC: 1541118 & Seguro de $2M',
-      titleEn: 'Florida CGC: 1541118 & $2M Liability Coverage',
-      descEs: 'Contratista General Certificado avalado por el Estado de Florida (DBPR) con pólizas de General Liability y Workers Compensation para máxima tranquilidad.',
-      descEn: 'State-certified general contractor licensed across Florida with active General Liability and Workers Compensation policies for zero owner liability.',
+      titleEs: 'Licencia Estatal Certificada en Florida & Seguro con Cobertura Total',
+      titleEn: 'Florida State-Certified & Full Insurance Coverage',
+      descEs: 'Contratista General Certificado avalado por el Estado de Florida (DBPR) con pólizas completas de General Liability y Workers Compensation para máxima tranquilidad.',
+      descEn: 'State-certified general contractor licensed across Florida with active full General Liability and Workers Compensation policies for zero owner liability.',
     },
     {
       icon: Award,

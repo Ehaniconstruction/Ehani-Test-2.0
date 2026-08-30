@@ -29,8 +29,42 @@ export const Footer: React.FC<FooterProps> = ({ lang, onNavigate, onOpenQuoteMod
       {/* Background Glow */}
       <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#C5A059]/5 rounded-full blur-3xl pointer-events-none" />
 
+      {/* Relocated Top Header Information Bar to Footer */}
+      <div className="bg-[#0B0F17] text-slate-300 text-xs py-3.5 px-4 border-b border-slate-800/90">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-3">
+          <div className="flex flex-wrap items-center justify-center md:justify-start gap-4 sm:gap-6">
+            <div className="flex items-center gap-1.5 text-slate-200 font-semibold">
+              <ShieldCheck className="w-4 h-4 text-[#C5A059] shrink-0" />
+              <span>{lang === 'es' ? `Florida CGC: ${COMPANY_INFO.licenseNumber.replace('CGC: ', '')} • Con Licencia & Seguro` : `Florida CGC: ${COMPANY_INFO.licenseNumber.replace('CGC: ', '')} • Fully Licensed & Insured`}</span>
+            </div>
+            <div className="flex items-center gap-1.5 text-slate-300">
+              <Clock className="w-3.5 h-3.5 text-[#C5A059] shrink-0" />
+              <span>{lang === 'es' ? 'Mon-Sat 7am-7pm | Emergencias 24/7' : 'Mon-Sat 7am-7pm | 24/7 Emergencies'}</span>
+            </div>
+          </div>
+
+          <div className="flex flex-wrap items-center justify-center md:justify-end gap-4 sm:gap-5">
+            <a
+              href={`mailto:${COMPANY_INFO.email}`}
+              className="flex items-center gap-1.5 hover:text-[#DFBA5C] transition-colors"
+            >
+              <Mail className="w-3.5 h-3.5 text-[#C5A059] shrink-0" />
+              <span>{COMPANY_INFO.email}</span>
+            </a>
+            <span className="text-slate-700 hidden sm:inline">|</span>
+            <a
+              href={`tel:${COMPANY_INFO.phoneRaw}`}
+              className="flex items-center gap-1.5 font-bold text-amber-400 hover:text-amber-300 transition-colors"
+            >
+              <Phone className="w-3.5 h-3.5 text-[#C5A059] shrink-0" />
+              <span>{COMPANY_INFO.phone}</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
       {/* Main Footer Content */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-14 pb-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8">
           
           {/* Col 1: Brand & Credentials (4 cols) */}
@@ -98,11 +132,6 @@ export const Footer: React.FC<FooterProps> = ({ lang, onNavigate, onOpenQuoteMod
               <li>
                 <button onClick={() => onNavigate('gallery')} className="hover:text-white transition-colors cursor-pointer">
                   {lang === 'es' ? 'Portafolio de Obras' : 'Project Gallery'}
-                </button>
-              </li>
-              <li>
-                <button onClick={() => onNavigate('estimator')} className="hover:text-white transition-colors cursor-pointer flex items-center gap-1">
-                  <span>{lang === 'es' ? 'Calculadora de Costos' : 'Cost Estimator'}</span>
                 </button>
               </li>
               <li>

@@ -9,7 +9,6 @@ import {
   ShieldCheck, 
   Menu, 
   X, 
-  Calculator, 
   ArrowRight,
   Globe
 } from 'lucide-react';
@@ -48,7 +47,6 @@ export const Navbar: React.FC<NavbarProps> = ({
     { id: 'hero', labelEs: 'Inicio', labelEn: 'Home' },
     { id: 'services', labelEs: 'Servicios', labelEn: 'Services' },
     { id: 'gallery', labelEs: 'Galería', labelEn: 'Gallery' },
-    { id: 'estimator', labelEs: 'Calculadora', labelEn: 'Estimator' },
     { id: 'process', labelEs: 'Proceso', labelEn: 'Process' },
     { id: 'why-us', labelEs: 'Por Qué Elegirnos', labelEn: 'Why Choose Us' },
     { id: 'faq', labelEs: 'Preguntas', labelEn: 'FAQ' },
@@ -62,55 +60,12 @@ export const Navbar: React.FC<NavbarProps> = ({
 
   return (
     <header className="sticky top-0 z-40 w-full transition-all duration-300">
-      {/* Top Utility Bar (Premium Gold & Obsidian Black) */}
-      <div className="bg-[#0B0F17] text-slate-300 text-xs py-2 px-4 border-b border-[#2A2213] hidden md:block">
-        <div className="max-w-7xl mx-auto flex justify-between items-center">
-          <div className="flex items-center gap-6">
-            <div className="flex items-center gap-1.5 text-slate-300 hover:text-amber-300 transition-colors">
-              <ShieldCheck className="w-4 h-4 text-[#C5A059]" />
-              <span>{lang === 'es' ? `Florida CGC: ${COMPANY_INFO.licenseNumber.replace('CGC: ', '')} • Con Licencia & Seguro` : `Florida CGC: ${COMPANY_INFO.licenseNumber.replace('CGC: ', '')} • Fully Licensed & Insured`}</span>
-            </div>
-            <div className="flex items-center gap-1.5 text-slate-300">
-              <Clock className="w-3.5 h-3.5 text-[#C5A059]" />
-              <span>{lang === 'es' ? 'Mon-Sat 7am-7pm | Emergencias 24/7' : 'Mon-Sat 7am-7pm | 24/7 Emergencies'}</span>
-            </div>
-          </div>
-
-          <div className="flex items-center gap-5">
-            <a
-              href={`mailto:${COMPANY_INFO.email}`}
-              className="flex items-center gap-1.5 hover:text-[#DFBA5C] transition-colors"
-            >
-              <Mail className="w-3.5 h-3.5 text-[#C5A059]" />
-              <span>{COMPANY_INFO.email}</span>
-            </a>
-            <span className="text-slate-700">|</span>
-            <a
-              href={`tel:${COMPANY_INFO.phoneRaw}`}
-              className="flex items-center gap-1.5 font-bold text-amber-400 hover:text-amber-300 transition-colors"
-            >
-              <Phone className="w-3.5 h-3.5 text-[#C5A059]" />
-              <span>{COMPANY_INFO.phone}</span>
-            </a>
-            <span className="text-slate-700">|</span>
-            <button
-              onClick={onToggleLang}
-              className="flex items-center gap-1 font-semibold text-xs px-2.5 py-0.5 rounded-full bg-slate-800 hover:bg-slate-700 border border-slate-700 text-slate-200 hover:text-white transition-all cursor-pointer"
-              title={lang === 'es' ? 'Switch to English' : 'Cambiar a Español'}
-            >
-              <Globe className="w-3 h-3 text-[#C5A059]" />
-              <span>{lang === 'es' ? 'EN' : 'ES'}</span>
-            </button>
-          </div>
-        </div>
-      </div>
-
       {/* Main Glass Navigation Bar */}
       <nav
         className={`w-full transition-all duration-300 ${
           isScrolled
             ? 'bg-white/95 backdrop-blur-md shadow-md border-b border-amber-200/40 py-3'
-            : 'bg-white py-4 border-b border-slate-100 shadow-sm'
+            : 'bg-white py-3.5 sm:py-4 border-b border-slate-100 shadow-sm'
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
@@ -143,14 +98,15 @@ export const Navbar: React.FC<NavbarProps> = ({
           </div>
 
           {/* Right Action Area */}
-          <div className="hidden sm:flex items-center gap-3">
-            {/* Quick Estimator CTA */}
+          <div className="hidden sm:flex items-center gap-2.5 sm:gap-3">
+            {/* Language Switch */}
             <button
-              onClick={() => handleLinkClick('estimator')}
-              className="hidden xl:flex items-center gap-1.5 text-xs font-semibold px-3 py-2 text-slate-700 hover:text-slate-950 hover:bg-amber-50/60 rounded-lg border border-slate-200 transition-all cursor-pointer"
+              onClick={onToggleLang}
+              className="flex items-center gap-1 font-bold text-xs px-2.5 py-2 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 hover:text-slate-900 border border-slate-200 transition-all cursor-pointer"
+              title={lang === 'es' ? 'Switch to English' : 'Cambiar a Español'}
             >
-              <Calculator className="w-3.5 h-3.5 text-[#C5A059]" />
-              <span>{lang === 'es' ? 'Calcular Costo' : 'Calculate Cost'}</span>
+              <Globe className="w-3.5 h-3.5 text-[#C5A059]" />
+              <span>{lang === 'es' ? 'EN' : 'ES'}</span>
             </button>
 
             {/* Direct Call Pill */}
@@ -169,14 +125,6 @@ export const Navbar: React.FC<NavbarProps> = ({
             >
               <span>{lang === 'es' ? 'Cotizar Gratis' : 'Free Estimate'}</span>
               <ArrowRight className="w-3.5 h-3.5" />
-            </button>
-
-            {/* Mobile language switch for sm screens */}
-            <button
-              onClick={onToggleLang}
-              className="md:hidden flex items-center justify-center w-8 h-8 rounded-lg bg-slate-100 text-slate-800 font-bold text-xs"
-            >
-              {lang === 'es' ? 'EN' : 'ES'}
             </button>
           </div>
 
